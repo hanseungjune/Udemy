@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 2</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 조건문을 실행 시킬때는 참과 거짓 true, false
+    // 아래 내용을 실행시킬지 말지 판단하는 문법
+    // 조건의 값의 true일때는 실행, 반대로 false일때는 실행하지 않는 것이
+    // 조건문입니다.
+
+    var a = 10;
+
+    // if(조건내용(비교연산자)) { // 조건이 참이면 실행될 내용 }
+
+    if (a == 10) {
+        console.log('조건이 참(true)입니다. 내용을 실행합니다.');
+    }
+
+    if (a != 5) {
+        console.log('조건이 거짓(false)입니다. 내용을 실행하지 않습니다.');
+    }
+
+    // if ~ else 조건문
+
+    // if(조건내용){실행내용} else { // if가 참이 아닐 때 실행될 내용 }
+
+    if (a == 5) {
+        // 조건이 참
+        console.log('조건이 참입니다.');
+    } else {
+        console.log('조건이 거짓입니다.');
+    }
+
+    // 먼저 if문에서 조건을 확인
+    // 만일 조건이 참이라면, if문에 해당하는 내용을 실행
+    // 만일 조건이 거짓이라면, else(나머지)문에 해당하는 내용을 실행
+
+    // if ~ else if ~ else 조건문
+    // if else 까지는 1가지의 조건과 나머지 구분가능
+    // if ~ else if ~ else 
+    // n가지의 조건과 그에 해당하지 않는 나머지를 구분가능
+
+    // if문 여러개
+    // 코드자체가 길어지고, 알아보기가 어려워질수도
+
+    var b = 5;
+
+    if (b == 1) {
+        console.log('b는 1입니다.');
+    } else if (b == 3) {
+        console.log('b는 3입니다.');
+    } else {
+        console.log('b는 1도 3도 아닌 다른 값입니다.');
+    }
+
+    // 크기비교 연산자를 이용한 조건문
+
+    var c = 6;
+
+    if(c > 7) {
+        console.log('c는 7보다 큽니다.');
+    }else if(c < 7){
+        console.log('c는 7보다 작습니다.');
+    }else {
+        console.log('c는 7입니다.');
+    }
+
+    // 크기비교 연산자든, 비교 연산자를 사용하든
+    // 이러한 조건문을 사용할때 가장 큰 특징은
+    // 조건을 한번 지나갈때마다, 윗 내용은 아래에서 확인하지 않는다.
+    // 채 위에 남는것들이 조건문의 값이 true -> 실행
+    // 채 아래로 빠져나가는것을 조건문의 값이 false -> 실행되지않고 넘어간다.
+    // 마지막에 남는 고운 모래들은 else
+
+    // 5이상 10미만
+    // && , ||
+    
+    // &&(and) , ||(or)
+
+    if( c > 5 && c < 10) {
+        console.warn('c는 5보다 크고 10보다 작다');
+    }
+    // && 은 n가지 조건을 붙여줄 수 있는데
+    // n가지 조건 모두 true -> true
+    // n가지 조건 중에서 하나라도 false -> false
+
+    // || 은 n 가지 조건을 붙여줄수 있음
+    // n가지 조건중 하나라도 true -> true
+    // n가지 조건중 전부 false -> false
+
+    if ( c < 5 || c > 10){
+        console.warn('조건이 참입니다.');          //c가 6이라서 실행안됨
+    }
+
+
+</script>
+
+</html>
