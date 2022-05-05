@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+
+    
+</body>
+<script>
+
+    var arr1 = new Array();
+    // 배열에 아무런 값도 넣어주지않고, 배열의 길이도 정하지 않았다.
+    var arr2 = new Array(3);
+    // 배열에 아무런 값도 넣어주지않았지만, 배열의 길이는 3으로 정함.
+    var arr3 = [];
+    // 배열에 아무런 값도 넣어주지않고, 배열의 길이도 정하지 않았다.
+    var arr4 = [1,2,3,4,5];
+    // 배열에 값을 넣어주고, 넣어준 값만큼 배열의 길이가 설정되었다.
+
+    var arr5 = [1, '문자열', true, [1,2,3], {name : '객체'}, null, undefined];
+
+    var array = ['아이폰','갤럭시','아이패드','서피스'];
+    //인덱스        0        1         2         3
+
+    console.log(array);
+    console.log(array[0]);
+    console.log(array[1]);
+    console.log(array[2]);
+    console.log(array[3]);
+
+    console.log(array.length);
+
+    for( var i = 0 ; i < array.length ; i++ ) {
+        console.log('배열의 ' + (i+1) + '번째 값은' + array[i] + '입니다.');
+    }
+
+</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자료형</title>
+</head>
+<body>
+    
+    
+</body>
+<script>
+
+    var name = '갤럭시';
+    // String 문자형
+
+    var price = 800000;
+    // number 숫자형
+
+    var check = true;
+    // boolean형
+
+    var fruits = ['사과','바나나','오렌지'];
+    // array 배열형
+
+    var prod = {
+        name : '아이폰',
+        price : 1000000
+    }
+    // object 객체형
+
+    var testFunction = function testFnc(num1, num2) {
+        console.log(num1 + num2);
+    }
+    // function 함수형
+
+    var isNull = null;
+    // null 형
+
+    var isUndefined;
+    // null = 어떠한 값이 의도적으로 비어있다는 것을 표현하기위해 사용 (재선언 가능)
+    // undefined = 값은 비어있지만, 의도적이지 않음(재선언, 다시쓰기, 설정 불가능)
+
+    console.log(name + '의 타입은?' + typeof(name));
+    //typeof(name) --> name의 타입을 확인하겠다는 명령어
+
+    console.log(typeof(price));
+    console.log(typeof(check));
+    console.log(typeof(isNull));    //object
+    console.log(typeof(isUndefined));
+    console.log(typeof(fruits));    //object
+    console.log(typeof(prod));      //object
+    console.log(typeof(testFunction));
+
+    //자바스크립트는 느슨한 타입 또는 동적 언어
+
+    var testValue = 123;
+    console.log(testValue + '의 타입은? ' + typeof(testValue));
+
+    var testValue = '123';
+    console.log(testValue + '의 타입은? ' + typeof(testValue));
+
+    var testValue = true;
+    console.log(testValue + '의 타입은? ' + typeof(testValue));
+
+    // java c++ --> 한번 변수를 선언하면 다른 자료형 넣어줄 수 없다
+    // javascript --> 다른 자료형 넣어줘도 알아서 처리를 해준다.
+
+    '123'
+    //문자형
+    123
+    //숫자형
+
+    // 변수를 선언하거나 자료형을 정해줄때에는 중복되지않게하도록한다.
+</script>
+</html>

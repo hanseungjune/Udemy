@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let과 const</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    var num1 = 1;
+    let num2 = 2;
+    const num3 = 3;
+
+    console.log(num1);
+    console.log(num2);
+    console.log(num3);
+    // 세가지 선언방법 모두 일반적으로 사용하는데는 문제가 없다.
+
+    num1 = 4;
+    num2 = 5;
+    // num3 = 6;
+
+    // const는 최초 선언을 한 이후 값을 변경할 수 없다.
+
+    // var 과 let의 차이
+    
+    console.warn(varTest);
+    var varTest = 'var로 선언한 변수입니다.';
+
+    // var은 전역변수로서 앞으로 돌아가서 다시 확인하면서 작업
+
+    // console.warn(letTest);
+    let letTest = 'let으로 선언한 변수 입니다.';
+    console.warn(letTest);
+    // let은 변수선언을 항상 먼저하고 출력해야 에러가 뜨지 않는다.
+
+    if(true) {
+        var a = 5;
+    };
+
+    console.log(a);
+    // var은 조건문 안에서 선언되어도 밖으로 나와서 전역으로 작동한다. 그래서 밖에서도 출력가능 ( 에러가 발생할 확률이 높음 )
+
+    if(true){
+        let b = 4;
+    };
+
+    console.log(b);  //error
+    // let은 조건문 안에서 선언되면 조건문 안에서만 출력가능 ( 에러 발생 확률 낮음 )
+</script>
+</html>
