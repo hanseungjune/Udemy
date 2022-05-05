@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수 만들기</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // 객체 지향 프로그래밍
+    // 현실세계에 있는 물체의 개념을 데이터화 시키는 것
+
+    function Person(name) {
+        this.name = name;
+        // this.name --> person이라는 생성자 함수를 통해 생성되는 객체안의 name
+        // name --> 매개변수로 들어온 name
+        this.hello = function() {
+            console.log('안녕! 난 ' + this.name + '야!');
+        }
+    }
+
+    var student1 = new Person('철수');
+    var student2 = new Person('영희');
+
+    console.log(student1.name);
+    student1.hello();
+
+    console.log(student2.name);
+    student2.hello();
+
+    // 같은 생성자 함수를 통해서 만들어 졌지만, 두 객체는 서로 간섭하지 않고 독립적이다.
+
+    function Product(name, price, madeBy, weight){
+        this.name = name;
+        this.price = price;
+        this.madeBy = madeBy;
+        this.weight = weight;
+
+        this.hello = function(){
+            console.log(`이 제품의 이름은 ${this.name} 이고 가격은 ${this.price}원 이며, ${this.madeBy}에서 생산했습니다.`);
+        };
+    };
+
+    var s10 = new Product('갤럭시 s10', 800000, '삼성', '200g');
+
+    s10.hello();
+
+</script>
+</html>

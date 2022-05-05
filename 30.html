@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윈도우</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // window
+    // DOM(document object model)
+    // BOM(browser object model)
+
+    console.log(window);
+
+    var a = '전역변수 입니다!';
+
+    console.log(window.a); // console.log(a)랑 같음
+
+    // window.open('https://naver.com','네이버','width=1366, height=720')
+    // window.open('팝업주소(이동할 주소)','팝업의 이름','팜업의 설정')
+
+    /*
+        width : 팝업창 가로길이
+        height : 팝업창 세로길이
+        toolbar = no : 단축도구장(툴바) 표시안함
+        menubar = no : 메뉴창(메뉴바) 표시안함
+        location = no : 주소창 표시안함
+        scrollbars = no : 스크롤바 표시안함
+        status = no : 아래상태바창 표시안함  
+    */
+
+    //window.close(); 창 닫힘
+
+    //setTimeout, setInterval
+    //setTimeout은 특정시간 이후에 작동시키는 코드
+    //setInterval은 특정시간 이후에 반복을 시키는 코드
+
+    var test1 = window.setTimeout(function(){
+        console.log('2초 뒤에 실행됩니다.');
+    }, 2000);
+
+    var test2 = window.setInterval(function(){
+        console.log('1초마다 반복됩니다.');
+    },1000);
+
+    // 실행이나 반복을 멈추어야할때 
+    // clearTimeout 특정시간 이후 실행되는 setTimeout을 중지시키는 기능
+    // clearInterval 특정시간마다 반복 실행되는 setInterval을 중지시키는 기능임
+    // clearTimeout(정지시킬 setTimeout의 변수명)
+    // clearInterval(정지시킬 setInterval의 변수명)
+
+    var test3 = window.setTimeout(function(){
+        console.log('실행한지 5초가 지나 반복을 멈추었습니다.');
+        clearInterval(test2);
+    },5000);
+
+    
+
+
+
+</script>
+</html>

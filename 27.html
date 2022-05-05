@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체지향 프로그래밍</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function Person(name) {
+        this.name = name
+        this.hello = function(){
+            console.log('안녕! 난 '+ this.name + '야!');
+        }
+    };
+
+    var student = new Person('철수');
+    var student2 = {
+        name : '영희',
+        hello : function(){
+            console.log('안녕! 난 '+ this.name +'야!');
+        }
+    };
+
+    student.hello();
+    student2.hello();
+
+    // instanceof 키워드
+    // 해당 객체가 어느 함수를 통해 생성됬는지 확인이 가능한
+
+    console.log(student instanceof Person);             //true --> 생성자 함수를 통해서 만들어서
+    console.log(student2 instanceof Person);            //false --> 객체를 직접 만들어서
+
+    var student3 = Person('기웅');
+
+    console.log(student3); // 선언만 되어있기 때문에 undefined임(변수에 생성자를 대입하기 위해서는 꼭 'new'가 앞에 와야한다.)
+
+</script>
+</html>

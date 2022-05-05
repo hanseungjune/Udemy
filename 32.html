@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    
+    <div id="HTMLtest">
+
+    </div>
+
+    <div id="TEXTtest">
+
+    </div>
+</body>
+<script>
+
+    // 웹페이지는 요소 하나하나가 작은 영역으로 이루어져 있다
+    // 작은 요소 하나하나가 Node 라는 이름으로 불리고 있고
+    // Node 들은 노드트리라고 불리는 계층적 구조, 즉 조직도나 피라미드 같은 구조
+
+    /*
+        문서 노드(document Node) : HTML 문서 전체를 나타냄
+        요소 노드(element Node) : 모든 HTML 요소는 요소 노드이며, 속성 노드를 가질 수 있느 유일한 노드임
+        속성 노드(attribute Node) : 모든 HTML 요소의 속성은 속성 노드이며 요소 노드에 관한 정보를 가지고 있음
+        텍스트 노드(text Node) : HTML 문서의 모든 텍스트를 의미
+        주석 노드(comment Node) : HTML 문서의 모든 주석을 의미
+    */
+
+    var elementNode = document.createElement('h3');
+    // h3 태그를 생성 (요소 노드를 생성)
+
+    var textNode = document.createTextNode('요소 노드 안의 텍스트 노드');
+    // 텍스트 노드 생성
+
+    elementNode.appendChild(textNode);
+
+    document.body.appendChild(elementNode);
+
+    //getElementById
+
+    var HTMLarea = document.getElementById('HTMLtest');
+
+    console.log(HTMLarea);
+
+    HTMLarea.innerHTML = HTMLarea.innerHTML + '<h3>innerHTML을 통하여 내용을 집어넣습니다. </h3><br>';          //태그가 반영
+
+    console.log(HTMLarea.innerHTML);
+
+    // HTMLarea.innerHTML = '';
+
+    // innerText
+
+    var TEXTarea = document.getElementById('TEXTtest');
+
+    TEXTtest.innerText = TEXTtest.innerText + '<h3>innerText를 통하여 내용을 집어 넣습니다.</h3><br>';          //텍스트만 반영
+
+    // 노드를 삭제
+    TEXTarea.remove();      //TEXTarea의 내용을 전부 지우기
+
+    // document.body.remove();     //body 태그 안에 전부다 지우기
+
+</script>
+</html>
