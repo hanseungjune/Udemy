@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입출력</title>
+</head>
+<body>
+    
+    <div id="area">
+        
+    </div>
+
+
+</body>
+<script>
+
+    document.write('document.write를 통해 출력하고 있습니다.');
+    //DOM을 통해 HTML상에 직접 출력
+
+    var div = document.getElementById('area');
+
+    div.innerHTML = 'innerHTML을 통하여 값을 집어 넣었습니다.';
+    //div에 HTML문자열을 삽입하여 출력
+
+    console.log('콘솔에 출력하고 있습니다.');
+
+    //window.alert();
+    //말 그대로 알림창을 출력해주는 방법
+
+    // window.alert('alert을 사용하여 출력하고 있습니다.');
+    // alert('alert을 사용하여 출력하고 있습니다.');
+    // window는 생략가능
+
+    //window.confirm();
+    // 확인/취소 선택이 가능한 확인창입니다.
+
+    // window.confirm();
+    // 확인 --> true / 취소 --> false
+
+    // var result = window.confirm('당신은 탕수육을 찍어먹나요?')
+    // console.warn(result);
+
+    //confirm() 확인을 눌렀을대는 true, 취소를 눌렀을대는 false 가 나오는 것을 확인
+    //결과를 조건문을 사용해서 분기처리를 해줄수도 있습니다.
+
+    //window.prompt();
+
+    var result = window.prompt('당신은 탕수육을 어떻게 먹나요?');
+
+    console.log(`탕수육을 ${result}으로 드시는군요!`);
+    // 결과값을 받아서 재사용이 가능하다.
+
+
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규표현식</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    //정규표현식은 문자열에 나타나는 특정문자조합과 대응시키기위해 사용되는 패턴
+    //정규표현식은 RegExp와 String의 match, replace, search, split과 함께 쓰입니다.
+
+    //정규표현식을 사용
+
+    var str = "Vue.js javascript React java";
+
+    var regExp = /java/;
+    // --> 정규표현식 선언
+
+    //exec
+    console.log(regExp.exec(str)); 
+    // 여러개가 일치를 하더라도 문자열을 왼쪽부터 찾기 시작해 처음으로 찾은 내용에 대한 것을 보여주게 됨
+    
+    //test
+    console.log(regExp.test(str));
+    //정규표현식을 만족을 하면 true, 만족하지 못한다면 false
+
+    //match
+    console.log(str.match(regExp));
+    //exec() 와 똑같이 일치하는 문자열을 찾습니다.
+    // 플래그 문자 --> 없다면 exec와 차이가 없습니다.
+    
+    //replace
+    console.log(str.replace(regExp, '자바'));
+    //일치하는 문자열을 찾아서 교체해주는 기능
+    //플래그 문자없이 사용할때는 왼쪽에서부터 가장 먼저 찾은 내용만 바꾸어 준다
+
+    //search
+    console.log(str.search(regExp));
+    //찾고자 하는 문자의 인덱스 위치를 반환시켜줌
+    //만약 찾고자하는 문자열이 없으면 -1 반환
+
+    //split
+    console.log(str.split(regExp));
+
+    var regExp = /j/;
+
+    console.log(str.replace(regExp,'[$&]'));
+    //$& regExp에서 찾은 내용 --> j
+
+    console.log(str.replace(regExp, '($`)'));
+    //찾는 문자열보다 앞부분에 있는 내용을 찾아 대체가 됨
+    // $` --> Vue.
+
+    console.log(str.replace(regExp, "($')"));
+    //찾는 문자열보다 뒷부분에 있는 모든 내용을 찾아 대체가 됨
+    // $' --> s javascript React java
+
+    
+
+
+</script>
+</html>
